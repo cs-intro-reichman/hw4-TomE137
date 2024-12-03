@@ -17,8 +17,11 @@ public class Primes {
             prime = true;
             charsize = 1; // default the digit size for an item in numberarray to 1
             for(int j = 0; j < numberarray.length(); j++) {
-                // checks whether the next char of the string will be smaller than the last. this will only occur when then next number within the                          has a larger digit count than the previous number (i.e: 7 and 11, 97 and 101...)  
-                if(numberarray.length()!=1 && j!=0 && numberarray.charAt(j-1)>numberarray.charAt(j)) {
+                // checks if the next digit of the next number within the string will be smaller than the last.
+                //  this will only occur when then next number within has a larger digit count than the previous number (i.e: 7 and 11, 97 and 101...)  
+                if (i == 29) {
+                }
+                if(numberarray.length()!=1 && numberarray.charAt(j)=='1' && numberarray.charAt(j-charsize)>numberarray.charAt(j)) {
                     charsize++;
                 }
                 if(i % Integer.parseInt(numberarray.substring(j, j + charsize)) == 0) {
@@ -36,6 +39,6 @@ public class Primes {
                 counter++;
             }
         } 
-        System.out.println("There are " + counter + " prime numbers between 2 and " + high + " (" + (int) (100 * (double) numberarray.length() / high) + "% are primes)");
+        System.out.println("There are " + counter + " primes between 2 and " + high + " (" + (int) (100 * (double) numberarray.length() / high) + "% are primes)");
     }
 }
