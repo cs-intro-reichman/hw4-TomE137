@@ -39,6 +39,6 @@ public class Primes {
                 counter++;
             }
         } 
-        System.out.println("There are " + counter + " primes between 2 and " + high + " (" + (int) (100 * (double) numberarray.length() / high) + "% are primes)");
+        System.out.println("There are " + counter + " primes between 2 and " + high + " (" + (int) (100 * (double) counter / high) + "% are primes)");
     }
 }
